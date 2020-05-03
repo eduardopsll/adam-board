@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ArasaacService } from 'src/app/services/arasaac.service';
+import { Category } from 'src/app/models';
 
 @Component({
   selector: 'app-board-container',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardContainerComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  categories: Category[];
+
+  constructor(private arasaacService: ArasaacService) { }
 
   ngOnInit() {
+    this.arasaacService.getCategories().then(data => console.log(data));
   }
 
 }

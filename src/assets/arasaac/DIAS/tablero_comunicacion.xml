@@ -1,0 +1,47 @@
+<xml version="1.0" encoding="ISO-8859-1">
+  <cabecera>
+    <fondo color="11343"/>
+    <letra color="6744832"/>
+    <nombre titulo=" DIAS. SUSANA SÁNCHEZ PIMENTEL"/>
+    <componentes filas="2" columnas="4"/>
+  </cabecera>
+  <celda>
+    <coordenadas fila="1" columna="1"/>
+    <ocupada flag="true"/>
+    <pictograma imagen="IMAGENES/6554.png" audio="AUDIOS/0/211.mp3" texto="LUNES" categoria="6" color="16777215"/>
+  </celda>
+  <celda>
+    <coordenadas fila="1" columna="2"/>
+    <ocupada flag="true"/>
+    <pictograma imagen="IMAGENES/6557.png" audio="AUDIOS/0/212.mp3" texto="MARTES" categoria="6" color="16777215"/>
+  </celda>
+  <celda>
+    <coordenadas fila="1" columna="3"/>
+    <ocupada flag="true"/>
+    <pictograma imagen="IMAGENES/6563.png" audio="AUDIOS/0/213.mp3" texto="MIÉRCOLES" categoria="6" color="16777215"/>
+  </celda>
+  <celda>
+    <coordenadas fila="1" columna="4"/>
+    <ocupada flag="true"/>
+    <pictograma imagen="IMAGENES/6536.png" audio="AUDIOS/0/214.mp3" texto="JUEVES" categoria="6" color="16777215"/>
+  </celda>
+  <celda>
+    <coordenadas fila="2" columna="1"/>
+    <ocupada flag="true"/>
+    <pictograma imagen="IMAGENES/6629.png" audio="AUDIOS/0/215.mp3" texto="VIERNES" categoria="6" color="16777215"/>
+  </celda>
+  <celda>
+    <coordenadas fila="2" columna="2"/>
+    <ocupada flag="true"/>
+    <pictograma imagen="IMAGENES/6605.png" audio="AUDIOS/0/216.mp3" texto="SÁBADO" categoria="6" color="16777215"/>
+  </celda>
+  <celda>
+    <coordenadas fila="2" columna="3"/>
+    <ocupada flag="true"/>
+    <pictograma imagen="IMAGENES/6478.png" audio="AUDIOS/0/217.mp3" texto="DOMINGO" categoria="6" color="16777215"/>
+  </celda>
+  <celda>
+    <coordenadas fila="2" columna="4"/>
+    <ocupada flag="false"/>
+  </celda>
+</xml>
