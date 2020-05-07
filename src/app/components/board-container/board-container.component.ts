@@ -15,7 +15,9 @@ export class BoardContainerComponent implements OnInit {
   constructor(private arasaacService: ArasaacService) { }
 
   ngOnInit() {
-    this.arasaacService.getCategories().then(data => console.log(data));
+    this.arasaacService.getCategories().then(data => {
+      this.categories = data;
+    });
   }
 
 }

@@ -1,7 +1,9 @@
 export interface Pictogram {
     audio: string;
-    category: string;
+    subcategoryNum: string;
     color: string;
     image: string;
     text: string;
+    categoryId: string;
+    categoryColor: string;
 }

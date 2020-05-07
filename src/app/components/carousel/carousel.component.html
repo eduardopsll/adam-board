@@ -1,0 +1,13 @@
+<button class="btn" aria-label="Previous">
+  <img class="chevron chevron--left" src="assets/icons/multimedia.svg" alt="chevron-icon" />
+</button>
+<div class="list-container">
+  <ul class="list">
+    <li *ngFor="let category of items">
+      <app-card [item]="category"></app-card>
+    </li>
+  </ul>
+</div>
+<button class="btn" aria-label="Next">
+  <img class="chevron chevron--right" src="assets/icons/multimedia.svg" alt="chevron-icon" />
+</button>

@@ -1,0 +1,22 @@
+@import '_base';
+
+:host {
+    display: block;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: $light-base;
+    margin: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    max-width: 60px;
+    max-height: 60px;
+}

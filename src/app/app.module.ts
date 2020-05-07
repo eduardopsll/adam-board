@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoardComponent, BoardContainerComponent } from 'src/app/components';
+import { BoardComponent, BoardContainerComponent, CardComponent, CarouselComponent } from '@components/index';
 import { RouterModule } from '@angular/router';
 import { routes } from 'src/app/routes';
 
@@ -11,7 +11,9 @@ import { routes } from 'src/app/routes';
   declarations: [
     AppComponent,
     BoardContainerComponent,
-    BoardComponent
+    BoardComponent,
+    CarouselComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

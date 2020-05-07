@@ -1,0 +1,38 @@
+@import '_base';
+
+:host {
+    display: flex;
+    padding: $space-4;
+    margin: $space-2;
+}
+
+.list-container {
+    flex-grow: 1;
+    background-color: $light-base;
+    margin: 0 $space-2;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    min-width: 40px;
+    padding: 0;
+    border: 0;
+}
+
+.chevron {
+    fill: rgb(196,217,228);
+
+    &--left {
+        transform: rotate(90deg);
+    }
+
+    &--right {
+        transform: rotate(-90deg);
+    }
+}
