@@ -4,7 +4,7 @@
 <div class="list-container">
   <ul class="list">
     <li *ngFor="let category of items">
-      <app-card [item]="category"></app-card>
+      <app-card [item]="category" (onItemSelected)="itemSelected($event)"></app-card>
     </li>
   </ul>
 </div>
