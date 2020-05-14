@@ -16,3 +16,19 @@
 app-carousel {
     height: 100%;
 }
+
+.footer {
+  display: flex;
+}
+
+.btn {
+  flex-grow: 1;
+  height: pixel-to-rem(40);
+  background-color: $btn-color;
+  border: none;
+
+  &__icon {
+    height: pixel-to-rem(30);
+    transform: rotate(-90deg);
+  }
+}

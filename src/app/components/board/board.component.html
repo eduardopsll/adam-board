@@ -4,12 +4,19 @@
     (onItemSelected)="onCategorySelected($event)"
   ></app-carousel>
 </div>
-<div class="row">
+<div *ngIf="shouldDisplayCategory" class="row">
   <app-carousel
     *ngIf="categorySelected"
     [items]="categorySelected.items"
     (onItemSelected)="onPictogramSelected($event)"
   ></app-carousel>
 </div>
-<!-- <app-carousel [items]="pictogramSentence?.words"></app-carousel> -->
-<!-- <button (click)="play()">Play</button> -->
+<div *ngIf="!shouldDisplayCategory" class="row">
+  <app-carousel
+    [items]="pictogramSentence?.words"
+  ></app-carousel>
+</div>
+<div class="footer">
+  <button class="btn" (click)="play()"><img class="btn__icon" src="assets/icons/multimedia.svg"/></button>
+  <button class="btn" (click)="reset()"><img class="btn__icon" src="assets/icons/close_icon.svg"/></button>
+</div>

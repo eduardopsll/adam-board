@@ -9,11 +9,6 @@ import { TextToSpeechService } from 'src/app/services/text-to-speech.service';
 export class SentenceService {
 
     private pictogramSentence: Sentence;
-    private pictogramSentenceDefault: Sentence =  {
-        dateTime: null,
-        order: TextDirectionEnum.ltr,
-        words: []
-    }
 
     constructor(private textToSpeechService: TextToSpeechService){
         this.resetSentence();
@@ -40,6 +35,10 @@ export class SentenceService {
     }
 
     public resetSentence() {
-        this.pictogramSentence = {...this.pictogramSentenceDefault}
+        this.pictogramSentence = {
+            dateTime: null,
+            order: TextDirectionEnum.ltr,
+            words: []
+        }
     }
 }

@@ -14,20 +14,37 @@ export class BoardComponent implements OnInit {
   public categorySelected: Category;
   public pictogramSentence: Sentence;
 
+  public shouldDisplayCategory: boolean = false;
+
   constructor(private sentenceService: SentenceService) {}
 
   ngOnInit() {}
 
   public onCategorySelected(item: Category) {
     this.categorySelected = item;
+    this.displayCategory();
   }
 
   public onPictogramSelected(pictogram: Pictogram) {
     this.sentenceService.addPictogram(pictogram);
     this.pictogramSentence = this.sentenceService.getPictogramSentence();
+    this.hideCategory();
   }
 
   public play() {
     this.sentenceService.readSentence();
+  }
+
+  public reset() {
+    this.sentenceService.resetSentence();
+    this.pictogramSentence = this.sentenceService.getPictogramSentence();
+  }
+
+  private displayCategory() {
+    this.shouldDisplayCategory = true;
+  }
+
+  private hideCategory() {
+    this.shouldDisplayCategory = false;
   }
 }
