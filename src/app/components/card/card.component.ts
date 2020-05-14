@@ -31,7 +31,8 @@ export class CardComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (changes.item) {
       this.customStyle = {
-        border: `5px solid ${this.item["categoryColor"] || this.item.color}`,
+        border: `1px solid ${this.item["categoryColor"] || this.item.color}`,
+        backgroundColor: this.item["categoryColor"] || this.item.color
       };
       this.srcImage = this.item["image"]
         ? `assets/arasaac/${this.item["categoryId"]}/${this.item["image"]}`

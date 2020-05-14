@@ -1,8 +1,15 @@
-<div class="container">
-    <div class="content">
-        <app-carousel [items]="categories" (onItemSelected)="onCategorySelected($event)"></app-carousel>
-        <app-carousel *ngIf="categorySelected" [items]="categorySelected.items" (onItemSelected)="onPictogramSelected($event)"></app-carousel>
-        <app-carousel [items]="pictogramSentence?.words"></app-carousel>
-        <button (click)="play()">Play</button>
-    </div>
+<div class="row">
+  <app-carousel
+    [items]="categories"
+    (onItemSelected)="onCategorySelected($event)"
+  ></app-carousel>
 </div>
+<div class="row">
+  <app-carousel
+    *ngIf="categorySelected"
+    [items]="categorySelected.items"
+    (onItemSelected)="onPictogramSelected($event)"
+  ></app-carousel>
+</div>
+<!-- <app-carousel [items]="pictogramSentence?.words"></app-carousel> -->
+<!-- <button (click)="play()">Play</button> -->

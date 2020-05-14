@@ -6,17 +6,18 @@
 .card {
     display: flex;
     flex-direction: column;
-    min-width: 100px;
-    min-height: 100px;
-    background-color: $light-base;
-    margin: 1rem;
-    border-radius: 20px;
+    min-width: pixel-to-rem(80);
+    min-height: pixel-to-rem(80);
+    margin: $space-2;
+    border-radius: 50%;
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    font-size: $font-sm;
+    box-shadow: 2px 2px 5px #444;
 }
 
 .image {
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 40px;
+    max-height: 40px;
 }
