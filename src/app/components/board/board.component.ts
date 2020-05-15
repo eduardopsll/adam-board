@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Category, Pictogram, Sentence } from "src/app/models";
-import { SentenceService } from "@services/index";
+import { SentenceService } from "@services";
+import { CarouselEnum } from '@enums';
 
 @Component({
   selector: "app-board",
@@ -13,6 +14,7 @@ export class BoardComponent implements OnInit {
 
   public categorySelected: Category;
   public pictogramSentence: Sentence;
+  public carouselType = CarouselEnum;
 
   public shouldDisplayCategory: boolean = false;
 
@@ -21,8 +23,12 @@ export class BoardComponent implements OnInit {
   ngOnInit() {}
 
   public onCategorySelected(item: Category) {
-    this.categorySelected = item;
-    this.displayCategory();
+    if (this.categorySelected && this.categorySelected.id === item.id) {
+      this.hideCategory();
+    } else {
+      this.categorySelected = item;
+      this.displayCategory();
+    }
   }
 
   public onPictogramSelected(pictogram: Pictogram) {
@@ -33,11 +39,13 @@ export class BoardComponent implements OnInit {
 
   public play() {
     this.sentenceService.readSentence();
+    this.hideCategory();
   }
 
   public reset() {
     this.sentenceService.resetSentence();
     this.pictogramSentence = this.sentenceService.getPictogramSentence();
+    this.hideCategory();
   }
 
   private displayCategory() {
@@ -45,6 +53,7 @@ export class BoardComponent implements OnInit {
   }
 
   private hideCategory() {
+    this.categorySelected = undefined;
     this.shouldDisplayCategory = false;
   }
 }

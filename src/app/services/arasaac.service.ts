@@ -21,9 +21,9 @@ export class ArasaacService {
   * Color are also defined in base.scss
   */
   private categoriesColor = {
-      [CategoryEnum.Days]: '#E69749',
-      [CategoryEnum.Months]: '#1B7EB7',
-      [CategoryEnum.Emotions]: '#076A3F'
+      [CategoryEnum.Days]: '#3d73df',
+      [CategoryEnum.Months]: '#5b5bb9',
+      [CategoryEnum.Emotions]: '#575366'
 
   }
 

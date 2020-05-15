@@ -1,5 +1,5 @@
-import { Pictogram } from '@models/pictogram.model';
-import { TextDirectionEnum } from '@enums/index';
+import { Pictogram } from '@models';
+import { TextDirectionEnum } from '@enums';
 
 export interface Sentence {
     dateTime: string,

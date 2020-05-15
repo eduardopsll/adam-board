@@ -6,8 +6,7 @@ import {
   Output,
   EventEmitter,
 } from "@angular/core";
-import { Pictogram, Category } from "@models/index";
-import { TextToSpeechService } from "@services/index";
+import { Pictogram, Category } from "@models";
 
 @Component({
   selector: "app-card",
@@ -26,13 +25,13 @@ export class CardComponent implements OnChanges {
   public customStyle: { [key: string]: string };
   public srcImage: string;
 
-  constructor(private textToSpeech: TextToSpeechService) {}
+  constructor() {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.item) {
       this.customStyle = {
-        border: `1px solid ${this.item["categoryColor"] || this.item.color}`,
-        backgroundColor: this.item["categoryColor"] || this.item.color
+        border: `2px solid ${this.item["categoryColor"] || this.item.color}`,
+        backgroundColor: this.item["categoryColor"] ? '#FFF' : this.item.color
       };
       this.srcImage = this.item["image"]
         ? `assets/arasaac/${this.item["categoryId"]}/${this.item["image"]}`
@@ -41,7 +40,6 @@ export class CardComponent implements OnChanges {
   }
 
   public clickCard() {
-    this.textToSpeech.utterThis(this.item["texto"] || this.item["id"]);
     this.onItemSelected.emit(this.item);
   }
 }

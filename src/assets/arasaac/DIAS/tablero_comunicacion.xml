@@ -2,7 +2,7 @@
   <cabecera>
     <fondo color="11343"/>
     <letra color="6744832"/>
-    <nombre titulo=" DIAS. SUSANA SÁNCHEZ PIMENTEL"/>
+    <nombre titulo=" DIAS. SUSANA Sï¿½NCHEZ PIMENTEL"/>
     <componentes filas="2" columnas="4"/>
   </cabecera>
   <celda>
@@ -18,7 +18,7 @@
   <celda>
     <coordenadas fila="1" columna="3"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/6563.png" audio="AUDIOS/0/213.mp3" texto="MIÉRCOLES" categoria="6" color="16777215"/>
+    <pictograma imagen="IMAGENES/6563.png" audio="AUDIOS/0/213.mp3" texto="MIÃ‰RCOLES" categoria="6" color="16777215"/>
   </celda>
   <celda>
     <coordenadas fila="1" columna="4"/>
@@ -33,7 +33,7 @@
   <celda>
     <coordenadas fila="2" columna="2"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/6605.png" audio="AUDIOS/0/216.mp3" texto="SÁBADO" categoria="6" color="16777215"/>
+    <pictograma imagen="IMAGENES/6605.png" audio="AUDIOS/0/216.mp3" texto="SÃBADO" categoria="6" color="16777215"/>
   </celda>
   <celda>
     <coordenadas fila="2" columna="3"/>

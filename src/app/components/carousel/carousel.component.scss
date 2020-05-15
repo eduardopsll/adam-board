@@ -2,14 +2,18 @@
 
 :host {
   display: flex;
-  overflow-y: scroll;
-}
-
-.list-container {
   flex-grow: 1;
-  overflow: hidden;
   display: flex;
   align-items: stretch;
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   width: pixel-to-rem(40);
+  //   height: 116px;
+  //   right: 0;
+  //   background-image: linear-gradient(to right, rgba(216, 216, 216, 0.02), rgba(238, 238, 238, 0.81));
+  // }
 }
 
 .list {
@@ -19,6 +23,21 @@
   padding: 0 $space-4;
   align-items: center;
   overflow-y: scroll;
+  position: relative;
+
+  &__item {
+    padding: 0 $space-3;
+    &--selected {
+      transform: scale(1.11);
+    }
+  }
+}
+
+.item-empty {
+  min-width: pixel-to-rem(100);
+  min-height: pixel-to-rem(110);
+  border-radius: 15px;
+  background-color: rgba(163, 158, 158, 0.25);
 }
 
 .btn {

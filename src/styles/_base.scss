@@ -25,11 +25,20 @@ body {
   font-weight: $regular;
 }
 
-// $primary-color: #00b4cc;
-$primary-color: #149ed9;
+$primary-color: rgba(113, 190, 199, 0.78);
 $light-base: #ffffff;
-$btn-color: #1982B9;
 
-$category-months: #1b7eb7;
-$category-days: #FFCB78;
-$category-emotions: #076a3f;
+$text-primary-color: #ffffff;
+$text-secondary-color: #121213;
+
+$btn-primary-color-action: #d1e3dd;
+$btn-secondary-color-action: #d8d8de;
+
+$btn-primary-color-menu: #5762d5;
+$btn-secondary-color-menu: #32292f;
+
+$border-primary-color: #979797;
+
+$category-months: #5b5bb9;
+$category-days: #3d73df;
+$category-emotions: #575366;

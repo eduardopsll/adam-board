@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Pictogram, Category } from 'src/app/models';
+import { CarouselEnum } from '@enums';
 
 @Component({
   selector: 'app-carousel',
@@ -10,16 +11,22 @@ export class CarouselComponent implements OnInit {
 
   @Input()
   public items: Category[] | Pictogram[];
+  @Input()
+  public itemSelected: Category | Pictogram;
+  @Input()
+  public type: CarouselEnum = CarouselEnum.Categories;
 
   @Output()
   public onItemSelected: EventEmitter<Pictogram | Category> = new EventEmitter();
+
+  public carouselType = CarouselEnum;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  public itemSelected(item: Pictogram | Category) {
+  public onItemClick(item: Pictogram | Category) {
     this.onItemSelected.emit(item);
   }
 

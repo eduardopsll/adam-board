@@ -1,7 +1,15 @@
-<div class="list-container">
-  <ul class="list">
-    <li *ngFor="let category of items">
-      <app-card [item]="category" (onItemSelected)="itemSelected($event)"></app-card>
-    </li>
-  </ul>
-</div>
+<ul class="list">
+  <li class="list__item" *ngFor="let item of items">
+    <app-card
+      [item]="item"
+      [class.list__item--selected]="item.id === itemSelected?.id"
+      [class.pictogram]="type === carouselType.Pictograms"
+      [class.sentence]="type === carouselType.Sentence"
+      (onItemSelected)="onItemClick($event)"
+    ></app-card>
+  </li>
+  <ng-container *ngIf="type === carouselType.Sentence">
+    <li class="list__item"><div class="item-empty"></div></li>
+    <li class="list__item"><div class="item-empty"></div></li>
+  </ng-container>
+</ul>

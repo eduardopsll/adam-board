@@ -2,22 +2,43 @@
 
 :host {
     display: block;
+    color: $text-primary-color;
+}
+:host-context(.pictogram) {
+    color: $text-secondary-color;
 }
 .card {
     display: flex;
     flex-direction: column;
-    min-width: pixel-to-rem(80);
-    min-height: pixel-to-rem(80);
-    margin: $space-2;
-    border-radius: 50%;
+    min-width: pixel-to-rem(100);
+    min-height: pixel-to-rem(110);
+    box-sizing: border-box;
+    border-radius: 15px;
     overflow: hidden;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     font-size: $font-sm;
-    box-shadow: 2px 2px 5px #444;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+:host-context(.sentence) {
+    color: $text-secondary-color;
+
+    .card {
+        box-shadow: none;
+    }
 }
 
 .image {
-    max-width: 40px;
-    max-height: 40px;
+    width: pixel-to-rem(80);
+    height: pixel-to-rem(74);
+    border-radius: 15px;
+    border: 1px solid $border-primary-color;
+    margin-top: $space-1;
+}
+
+.text {
+    margin: 0;
+    padding: $space-1 $space-1 $space-3 $space-1;
+    align-self: flex-start;
 }

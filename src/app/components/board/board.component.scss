@@ -8,27 +8,41 @@
   background-color: $primary-color;
 }
 
-.row {
+.carousel {
   flex-grow: 1;
   flex-basis: 0;
+
+  &:last-of-type {
+    padding-bottom: $space-3;
+  }
 }
 
-app-carousel {
-    height: 100%;
-}
-
-.footer {
+.menu-action {
   display: flex;
+  padding: 0 $space-4 * 2;
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-grow: 1;
-  height: pixel-to-rem(40);
-  background-color: $btn-color;
+  height: pixel-to-rem(46);
   border: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  &--play {
+    background-color: $btn-primary-color-action;
+    margin-right: $space-1;
+  }
+
+  &--reset {
+    background-color: $btn-secondary-color-action;
+    margin-left: $space-1;
+  }
 
   &__icon {
     height: pixel-to-rem(30);
-    transform: rotate(-90deg);
   }
 }

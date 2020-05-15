@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoardComponent, BoardContainerComponent, CardComponent, CarouselComponent } from '@components/index';
+import { BoardComponent, BoardContainerComponent, CardComponent, CarouselComponent } from '@components';
 import { RouterModule } from '@angular/router';
 import { routes } from 'src/app/routes';
 

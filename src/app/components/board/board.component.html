@@ -1,22 +1,27 @@
-<div class="row">
-  <app-carousel
-    [items]="categories"
-    (onItemSelected)="onCategorySelected($event)"
-  ></app-carousel>
-</div>
-<div *ngIf="shouldDisplayCategory" class="row">
-  <app-carousel
-    *ngIf="categorySelected"
-    [items]="categorySelected.items"
-    (onItemSelected)="onPictogramSelected($event)"
-  ></app-carousel>
-</div>
-<div *ngIf="!shouldDisplayCategory" class="row">
-  <app-carousel
-    [items]="pictogramSentence?.words"
-  ></app-carousel>
-</div>
-<div class="footer">
-  <button class="btn" (click)="play()"><img class="btn__icon" src="assets/icons/multimedia.svg"/></button>
-  <button class="btn" (click)="reset()"><img class="btn__icon" src="assets/icons/close_icon.svg"/></button>
+<app-carousel
+  class="carousel"
+  [itemSelected]="categorySelected"
+  [items]="categories"
+  (onItemSelected)="onCategorySelected($event)"
+></app-carousel>
+<app-carousel
+  *ngIf="shouldDisplayCategory"
+  class="carousel"
+  [type]="carouselType.Pictograms"
+  [items]="categorySelected?.items"
+  (onItemSelected)="onPictogramSelected($event)"
+></app-carousel>
+<app-carousel
+  *ngIf="!shouldDisplayCategory"
+  class="carousel"
+  [type]="carouselType.Sentence"
+  [items]="pictogramSentence?.words"
+></app-carousel>
+<div class="menu-action">
+  <button class="btn btn--play" (click)="play()">
+    <img class="btn__icon" src="assets/icons/multimedia.svg" />
+  </button>
+  <button class="btn btn--reset" (click)="reset()">
+    <img class="btn__icon" src="assets/icons/reset.svg" />
+  </button>
 </div>

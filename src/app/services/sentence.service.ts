@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
-import { Sentence, Pictogram } from '@models/index';
-import { TextDirectionEnum } from '@enums/index';
+import { Sentence, Pictogram } from '@models';
+import { TextDirectionEnum } from '@enums';
 import { TextToSpeechService } from 'src/app/services/text-to-speech.service';
+import { PictogramAsset } from 'src/app/models/pictogram-asset.model';
 
 @Injectable({
     providedIn: "root"
@@ -14,7 +15,7 @@ export class SentenceService {
         this.resetSentence();
     }
 
-    public getPictogramSentence() {
+    public getPictogramSentence(): Sentence {
         return this.pictogramSentence;
     }
 
