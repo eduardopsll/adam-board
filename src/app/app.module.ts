@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoardComponent, BoardContainerComponent, CardComponent, CarouselComponent } from '@components';
+import { BoardComponent, BoardContainerComponent, CardComponent, CarouselComponent, MenuComponent } from '@components';
 import { RouterModule } from '@angular/router';
 import { routes } from 'src/app/routes';
 
@@ -13,10 +14,12 @@ import { routes } from 'src/app/routes';
     BoardContainerComponent,
     BoardComponent,
     CarouselComponent,
-    CardComponent
+    CardComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],

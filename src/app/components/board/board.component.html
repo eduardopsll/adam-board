@@ -1,3 +1,4 @@
+<app-menu class="menu"></app-menu>
 <app-carousel
   class="carousel"
   [itemSelected]="categorySelected"
@@ -20,6 +21,9 @@
 <div class="menu-action">
   <button class="btn btn--play" (click)="play()">
     <img class="btn__icon" src="assets/icons/multimedia.svg" />
+  </button>
+  <button class="btn btn--back" (click)="back()">
+    <img class="btn__icon" src="assets/icons/back-arrow.svg" />
   </button>
   <button class="btn btn--reset" (click)="reset()">
     <img class="btn__icon" src="assets/icons/reset.svg" />

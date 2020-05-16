@@ -37,6 +37,12 @@ export class BoardComponent implements OnInit {
     this.hideCategory();
   }
 
+  public back() {
+    this.sentenceService.removePictogram();
+    this.pictogramSentence = this.sentenceService.getPictogramSentence();
+    this.hideCategory();
+  }
+
   public play() {
     this.sentenceService.readSentence();
     this.hideCategory();

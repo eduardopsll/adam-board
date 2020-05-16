@@ -1,11 +1,18 @@
 @import "_base";
 
 :host {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
   background-color: $primary-color;
+}
+
+.menu {
+  position: absolute;
+  right: $space-3;
+  z-index: 1;
 }
 
 .carousel {
@@ -27,19 +34,16 @@
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  flex-basis: 0;
   height: pixel-to-rem(46);
   border: none;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  margin-right: $space-2;
+  background-color: $btn-secondary-color-action;
 
   &--play {
     background-color: $btn-primary-color-action;
-    margin-right: $space-1;
-  }
-
-  &--reset {
-    background-color: $btn-secondary-color-action;
-    margin-left: $space-1;
   }
 
   &__icon {
