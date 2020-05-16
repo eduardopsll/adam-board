@@ -1,9 +1,9 @@
 export interface Pictogram {
-    audio: string;
-    subcategoryNum: string;
+    audios: {[key: string]: string};
+    categoryColor: string;
+    categoryId: string;
     color: string;
     image: string;
+    subcategoryNum: string;
     text: string;
-    categoryId: string;
-    categoryColor: string;
 }

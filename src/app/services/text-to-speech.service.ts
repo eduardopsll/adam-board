@@ -1,27 +1,20 @@
 import { Injectable } from "@angular/core";
+import { LanguageService } from 'src/app/services/language.service';
 
 @Injectable({
   providedIn: "root",
 })
 export class TextToSpeechService {
 
-    private lang: string;
-
-  constructor() {
-      this.lang = 'es-ES';
-      //this.lang = 'ar-MA';
+  constructor(private languageService: LanguageService) {
   }
 
   public utterThis(text) {
     if ("speechSynthesis" in window) {
         const msg = new SpeechSynthesisUtterance(text);
-        msg.lang = this.lang;
+        msg.lang = this.languageService.getLanguageSelected().id;
         window.speechSynthesis.speak(msg);
       }
-  }
-
-  public setLang(lang: string) {
-      this.lang = lang;
   }
 
 }

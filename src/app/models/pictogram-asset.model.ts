@@ -4,4 +4,5 @@ export interface PictogramAsset {
     color: string;
     imagen: string;
     texto: string;
+    textoAudio: string;
 }

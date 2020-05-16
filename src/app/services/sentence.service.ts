@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Sentence, Pictogram } from '@models';
 import { TextDirectionEnum } from '@enums';
 import { TextToSpeechService } from 'src/app/services/text-to-speech.service';
-import { PictogramAsset } from 'src/app/models/pictogram-asset.model';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Injectable({
     providedIn: "root"
@@ -11,7 +11,7 @@ export class SentenceService {
 
     private pictogramSentence: Sentence;
 
-    constructor(private textToSpeechService: TextToSpeechService){
+    constructor(private textToSpeechService: TextToSpeechService, private languageService: LanguageService){
         this.resetSentence();
     }
 
@@ -20,7 +20,7 @@ export class SentenceService {
     }
 
     public getSentence() {
-        return this.pictogramSentence.words.map(word => word.text).join(' ');
+        return this.pictogramSentence.words.map(word => word.audios[this.languageService.getLanguageSelected().id]).join(' ');
     }
 
     public addPictogram(pictogram: Pictogram) {

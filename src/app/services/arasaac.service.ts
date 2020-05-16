@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Pictogram, Category } from "src/app/models";
 import { CategoryEnum } from "src/app/enums";
 import { PictogramAsset } from "src/app/models/pictogram-asset.model";
+import { LanguageEnum } from 'src/app/enums/language.enum';
 
 @Injectable({
   providedIn: "root",
@@ -70,11 +71,14 @@ export class ArasaacService {
   ): ((value: PictogramAsset) => Pictogram) => (
     pictogramAsset: PictogramAsset
   ): Pictogram => ({
-    audio: pictogramAsset.audio,
     subcategoryNum: pictogramAsset.categoria,
     color: pictogramAsset.color,
     image: pictogramAsset.imagen,
     text: pictogramAsset.texto,
+    audios: {
+      [LanguageEnum["es-ES"]]: pictogramAsset.texto,
+      [LanguageEnum["ar-MA"]]: pictogramAsset.textoAudio
+    },
     categoryId,
     categoryColor
   });

@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Language } from "@models";
+import { LanguageEnum } from 'src/app/enums/language.enum';
 
 @Injectable({
   providedIn: "root",
@@ -7,11 +8,11 @@ import { Language } from "@models";
 export class LanguageService {
   private languages: Language[] = [
     {
-      id: "es-ES",
+      id: LanguageEnum["es-ES"],
       text: "Español",
     },
     {
-      id: "ar-MA",
+      id: LanguageEnum["ar-MA"],
       text: "Árabe",
     },
   ];
@@ -27,7 +28,7 @@ export class LanguageService {
 
   constructor() {
     const language = JSON.parse(this.localStorage.getItem("language"));
-    this.languageSelected = language || this.languageMap["ar-MA"];
+    this.languageSelected = language || this.languageMap[LanguageEnum["ar-MA"]];
   }
 
   public getLanguages(): Language[] {

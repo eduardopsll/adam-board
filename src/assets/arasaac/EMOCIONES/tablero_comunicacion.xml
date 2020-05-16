@@ -2,18 +2,18 @@
   <cabecera>
     <fondo color="9109621"/>
     <letra color="2105376"/>
-    <nombre titulo=" EMOCIONES. SUSANA S�NCHEZ PIMENTEL"/>
+    <nombre titulo=" EMOCIONES. SUSANA S�NCHEZ PIMENTEL"/>
     <componentes filas="4" columnas="4"/>
   </cabecera>
   <celda>
     <coordenadas fila="1" columna="1"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/2617.png" audio="AUDIOS/0/2758.mp3" texto="YO" categoria="6" color="16777215"/>
+    <pictograma imagen="IMAGENES/2617.png" audio="AUDIOS/0/2758.mp3" texto="YO" textoAudio="انا" categoria="6" color="16777215"/>
   </celda>
   <celda>
     <coordenadas fila="1" columna="2"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/5465.png" audio="AUDIOS/0/10.mp3" texto="ESTAR" categoria="3" color="3381504"/>
+    <pictograma imagen="IMAGENES/5465.png" audio="AUDIOS/0/10.mp3" texto="ESTAR" textoAudio="كان" categoria="3" color="3381504"/>
   </celda>
   <celda>
     <coordenadas fila="1" columna="3"/>
@@ -26,52 +26,52 @@
   <celda>
     <coordenadas fila="2" columna="1"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/2606.png" audio="AUDIOS/0/69.mp3" texto="TRISTE" categoria="4" color="39423"/>
+    <pictograma imagen="IMAGENES/2606.png" audio="AUDIOS/0/69.mp3" texto="TRISTE" textoAudio="حزين" categoria="4" color="39423"/>
   </celda>
   <celda>
     <coordenadas fila="2" columna="2"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/3250.png" audio="AUDIOS/0/68.mp3" texto="CONTENTO" categoria="4" color="39423"/>
+    <pictograma imagen="IMAGENES/3250.png" audio="AUDIOS/0/68.mp3" texto="CONTENTO" textoAudio="الإسْبانِيِّةُ" categoria="4" color="39423"/>
   </celda>
   <celda>
     <coordenadas fila="2" columna="3"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/2261.png" audio="AUDIOS/0/3318.mp3" texto="ASUSTADO" categoria="4" color="39423"/>
+    <pictograma imagen="IMAGENES/2261.png" audio="AUDIOS/0/3318.mp3" texto="ASUSTADO" textoAudio="خائف" categoria="4" color="39423"/>
   </celda>
   <celda>
     <coordenadas fila="2" columna="4"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/2374.png" audio="AUDIOS/0/67.mp3" texto="ENFADADO" categoria="4" color="39423"/>
+    <pictograma imagen="IMAGENES/2374.png" audio="AUDIOS/0/67.mp3" texto="ENFADADO" textoAudio="غاضب" categoria="4" color="39423"/>
   </celda>
   <celda>
     <coordenadas fila="3" columna="1"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/11312.png" audio="AUDIOS/0/9274.mp3" texto="NERVIOSO" categoria="4" color="39423"/>
+    <pictograma imagen="IMAGENES/11312.png" audio="AUDIOS/0/9274.mp3" texto="NERVIOSO" textoAudio="متوتر" categoria="4" color="39423"/>
   </celda>
   <celda>
     <coordenadas fila="3" columna="2"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/2574.png" audio="AUDIOS/0/5286.mp3" texto="SORPRENDIDO" categoria="4" color="39423"/>
+    <pictograma imagen="IMAGENES/2574.png" audio="AUDIOS/0/5286.mp3" texto="SORPRENDIDO" textoAudio="مَدْهُوش" categoria="4" color="39423"/>
   </celda>
   <celda>
     <coordenadas fila="3" columna="3"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/6922.png" audio="AUDIOS/0/864.mp3" texto="AVERGONZADO" categoria="4" color="39423"/>
+    <pictograma imagen="IMAGENES/6922.png" audio="AUDIOS/0/864.mp3" texto="AVERGONZADO" textoAudio="خجل" categoria="4" color="39423"/>
   </celda>
   <celda>
     <coordenadas fila="3" columna="4"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/2314.png" audio="AUDIOS/0/865.mp3" texto="CANSADO" categoria="4" color="39423"/>
+    <pictograma imagen="IMAGENES/2314.png" audio="AUDIOS/0/865.mp3" texto="CANSADO" textoAudio="تعبان" categoria="4" color="39423"/>
   </celda>
   <celda>
     <coordenadas fila="4" columna="1"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/2376.png" audio="AUDIOS/0/871.mp3" texto="ENFERMO" categoria="4" color="39423"/>
+    <pictograma imagen="IMAGENES/2376.png" audio="AUDIOS/0/871.mp3" texto="ENFERMO" textoAudio="مرض" categoria="4" color="39423"/>
   </celda>
   <celda>
     <coordenadas fila="4" columna="2"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/7253.png" audio="AUDIOS/0/7101.mp3" texto="SOLO" categoria="4" color="39423"/>
+    <pictograma imagen="IMAGENES/7253.png" audio="AUDIOS/0/7101.mp3" texto="SOLO" textoAudio="وحيد" categoria="4" color="39423"/>
   </celda>
   <celda>
     <coordenadas fila="4" columna="3"/>

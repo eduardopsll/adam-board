@@ -8,37 +8,37 @@
   <celda>
     <coordenadas fila="1" columna="1"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/6554.png" audio="AUDIOS/0/211.mp3" texto="LUNES" categoria="6" color="16777215"/>
+    <pictograma imagen="IMAGENES/6554.png" audio="AUDIOS/0/211.mp3" texto="LUNES" textoAudio="الاثنين" categoria="6" color="16777215"/>
   </celda>
   <celda>
     <coordenadas fila="1" columna="2"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/6557.png" audio="AUDIOS/0/212.mp3" texto="MARTES" categoria="6" color="16777215"/>
+    <pictograma imagen="IMAGENES/6557.png" audio="AUDIOS/0/212.mp3" texto="MARTES" textoAudio="الثلاثاء" categoria="6" color="16777215"/>
   </celda>
   <celda>
     <coordenadas fila="1" columna="3"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/6563.png" audio="AUDIOS/0/213.mp3" texto="MIÉRCOLES" categoria="6" color="16777215"/>
+    <pictograma imagen="IMAGENES/6563.png" audio="AUDIOS/0/213.mp3" texto="MIÉRCOLES" textoAudio="الأربعاء" categoria="6" color="16777215"/>
   </celda>
   <celda>
     <coordenadas fila="1" columna="4"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/6536.png" audio="AUDIOS/0/214.mp3" texto="JUEVES" categoria="6" color="16777215"/>
+    <pictograma imagen="IMAGENES/6536.png" audio="AUDIOS/0/214.mp3" texto="JUEVES" textoAudio="الخميس" categoria="6" color="16777215"/>
   </celda>
   <celda>
     <coordenadas fila="2" columna="1"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/6629.png" audio="AUDIOS/0/215.mp3" texto="VIERNES" categoria="6" color="16777215"/>
+    <pictograma imagen="IMAGENES/6629.png" audio="AUDIOS/0/215.mp3" texto="VIERNES" textoAudio="الجُمُعة" categoria="6" color="16777215"/>
   </celda>
   <celda>
     <coordenadas fila="2" columna="2"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/6605.png" audio="AUDIOS/0/216.mp3" texto="SÁBADO" categoria="6" color="16777215"/>
+    <pictograma imagen="IMAGENES/6605.png" audio="AUDIOS/0/216.mp3" texto="SÁBADO" textoAudio="السَّبْت" categoria="6" color="16777215"/>
   </celda>
   <celda>
     <coordenadas fila="2" columna="3"/>
     <ocupada flag="true"/>
-    <pictograma imagen="IMAGENES/6478.png" audio="AUDIOS/0/217.mp3" texto="DOMINGO" categoria="6" color="16777215"/>
+    <pictograma imagen="IMAGENES/6478.png" audio="AUDIOS/0/217.mp3" texto="DOMINGO" textoAudio="الأحَد" categoria="6" color="16777215"/>
   </celda>
   <celda>
     <coordenadas fila="2" columna="4"/>
