@@ -77,7 +77,7 @@ export class ArasaacService {
     text: pictogramAsset.texto,
     audios: {
       [LanguageEnum["es-ES"]]: pictogramAsset.texto,
-      [LanguageEnum["ar-MA"]]: pictogramAsset.textoAudio
+      [LanguageEnum["ar-SA"]]: pictogramAsset.textoAudio
     },
     categoryId,
     categoryColor

@@ -6,31 +6,13 @@ import { trigger, style, state, transition, animate } from '@angular/animations'
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
-  animations: [
-    trigger('openClose', [
-      state('opened', style({
-        height: '*',
-      })),
-      state('closed', style({
-        height: '0',
-      })),
-      transition('opened => closed', [
-        animate('1s')
-      ]),
-      transition('closed => opened', [
-        animate('1s')
-      ]),
-    ])
-  ]
+  styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
 
   public options: Menu[];
   public optionSelected: Menu;
-  public shouldDisplayAllOptions: boolean = false;
-  public openCloseAnimationOpenedFinised: boolean = true;
-  public openCloseAnimationClosedFinised: boolean = true;
+  public optionsAreSelectable: boolean = false;
 
   constructor(private languageService: LanguageService) { 
     this.options = this.languageService.getLanguages();
@@ -41,22 +23,10 @@ export class MenuComponent implements OnInit {
   }
 
   public selectOption($event): void {
-    this.openCloseAnimationClosedFinised = false;
-    this.shouldDisplayAllOptions = false;
-    this.updateLanguage($event);
-  }
-
-  public openMenu(): void {
-    this.openCloseAnimationOpenedFinised = false;
-    this.shouldDisplayAllOptions = true;
-  }
-
-  public openCloseDone(type: string) {
-    if (type === 'opened') {
-      this.openCloseAnimationOpenedFinised = true;
-    } else {
-      this.openCloseAnimationClosedFinised = true;
+    if (this.optionsAreSelectable) {
+      this.updateLanguage($event);
     }
+    this.optionsAreSelectable = !this.optionsAreSelectable;
   }
 
   private updateLanguage(language: Language): void {

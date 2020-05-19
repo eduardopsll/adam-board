@@ -1,28 +1,15 @@
 <ul
-  [@openClose]="shouldDisplayAllOptions && openCloseAnimationClosedFinised ? 'opened' : 'closed'"
-  (@openClose.done)="openCloseDone('opened')"
   class="menu"
-  [class.menu--opened]="shouldDisplayAllOptions"
 >
   <li
     class="menu__item"
+    [class.menu__item--opened]="optionsAreSelectable"
+    [class.menu__item--selected]="optionSelected.id === option.id"
     *ngFor="let option of options"
     (click)="selectOption(option)"
   >
-    <button class="btn" [class.btn--not-selected]="optionSelected.id !== option.id">
+    <button class="btn">
       {{ option.text }}
-    </button>
-  </li>
-</ul>
-<ul
-  [@openClose]="!shouldDisplayAllOptions && openCloseAnimationOpenedFinised ? 'opened' : 'closed'"
-  (@openClose.done)="openCloseDone('closed')"
-  class="menu"
-  [class.menu--closed]="!shouldDisplayAllOptions"
->
-  <li (click)="openMenu()">
-    <button class="btn btn--closed">
-      {{ optionSelected.text }}
     </button>
   </li>
 </ul>

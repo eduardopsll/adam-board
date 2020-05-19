@@ -12,6 +12,20 @@
 
   &__item {
     display: flex;
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease;
+
+    &--opened {
+      height: pixel-to-rem(56);
+    }
+
+    &--selected {
+      height: pixel-to-rem(30);
+      .btn {
+        background-color: $btn-primary-color-menu;
+      }
+    }
   }
 }
 
@@ -21,12 +35,11 @@
   border-bottom-right-radius: 10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   border: 0;
-  background-color: $btn-primary-color-menu;
+  background-color: $btn-secondary-color-menu;
   color: $text-primary-color;
   margin: 0 $space-1 $space-1 $space-1;
 
   &--not-selected {
     background-color: $btn-secondary-color-menu;
-    min-height: pixel-to-rem(56);
   }
 }

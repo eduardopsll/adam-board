@@ -8,13 +8,13 @@ import { LanguageEnum } from 'src/app/enums/language.enum';
 export class LanguageService {
   private languages: Language[] = [
     {
-      id: LanguageEnum["es-ES"],
-      text: "Español",
-    },
-    {
-      id: LanguageEnum["ar-MA"],
+      id: LanguageEnum["ar-SA"],
       text: "Árabe",
     },
+    {
+      id: LanguageEnum["es-ES"],
+      text: "Español",
+    }
   ];
   private languageMap: { [key: string]: Language } = this.languages.reduce(
     (acc, language) => {
@@ -28,7 +28,7 @@ export class LanguageService {
 
   constructor() {
     const language = JSON.parse(this.localStorage.getItem("language"));
-    this.languageSelected = language || this.languageMap[LanguageEnum["ar-MA"]];
+    this.languageSelected = language || this.languageMap[LanguageEnum["es-ES"]];
   }
 
   public getLanguages(): Language[] {
