@@ -1,9 +1,8 @@
 import parser from "xml2json-light";
 import { Injectable } from "@angular/core";
-import { Pictogram, Category } from "src/app/models";
-import { CategoryEnum } from "src/app/enums";
-import { PictogramAsset } from "src/app/models/pictogram-asset.model";
-import { LanguageEnum } from 'src/app/enums/language.enum';
+
+import { LanguageEnum, CategoryEnum } from '../enums';
+import { Category, Pictogram, PictogramAsset } from "../models";
 
 @Injectable({
   providedIn: "root",

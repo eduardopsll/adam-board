@@ -6,7 +6,7 @@ import {
   Output,
   EventEmitter,
 } from "@angular/core";
-import { Pictogram, Category } from "@models";
+import { Pictogram, Category } from "src/app/models";
 
 @Component({
   selector: "app-card",

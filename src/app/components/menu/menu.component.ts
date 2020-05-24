@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Menu, Language } from '@models';
-import { LanguageService } from '@services';
-import { trigger, style, state, transition, animate } from '@angular/animations';
+
+import { Menu, Language } from 'src/app/models';
+import { LanguageService } from 'src/app/services';
 
 @Component({
   selector: 'app-menu',

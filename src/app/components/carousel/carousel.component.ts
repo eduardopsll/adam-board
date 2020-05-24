@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { Pictogram, Category } from 'src/app/models';
-import { CarouselEnum } from '@enums';
+import { CarouselEnum } from 'src/app/enums';
 
 @Component({
   selector: 'app-carousel',

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Language } from "@models";
+import { Language } from "src/app/models/language.model";
 import { LanguageEnum } from 'src/app/enums/language.enum';
 
 @Injectable({

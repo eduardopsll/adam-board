@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
-import { Sentence, Pictogram } from '@models';
-import { TextDirectionEnum } from '@enums';
+
+import { Sentence, Pictogram } from 'src/app/models';
+import { TextDirectionEnum } from 'src/app/enums';
 import { TextToSpeechService } from 'src/app/services/text-to-speech.service';
 import { LanguageService } from 'src/app/services/language.service';
 

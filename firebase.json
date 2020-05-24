@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/adam-board",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

@@ -1,4 +1,4 @@
 <div class="card" [ngStyle]="customStyle" (click)="clickCard()">
     <img *ngIf="srcImage" class="image" [src]="srcImage" alt="">
-    <p class="text">{{item.text}}</p>
+    <p class="text">{{item?.text}}</p>
 </div>

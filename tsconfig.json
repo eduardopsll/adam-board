@@ -3,11 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@environments/*": ["src/environments/*"],
-      "@components": ["src/app/components/index"],
-      "@models": ["src/app/models/index"],
-      "@enums": ["src/app/enums/index"],
-      "@services": ["src/app/services/index"],
+      "@environments/*": ["src/environments/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -19,10 +15,12 @@
     "importHelpers": true,
     "target": "es2015",
     "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"]
+    "lib": ["es2018", "dom"],
+    "esModuleInterop": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": true,
+    "preserveWhitespaces": false
   }
 }

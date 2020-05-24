@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CarouselComponent } from '../carousel.component';
+import { CardComponent } from 'src/app/components/card';
 
 describe('CarouselComponent', () => {
   let component: CarouselComponent;
@@ -8,7 +9,7 @@ describe('CarouselComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarouselComponent ]
+      declarations: [ CarouselComponent, CardComponent ]
     })
     .compileComponents();
   }));

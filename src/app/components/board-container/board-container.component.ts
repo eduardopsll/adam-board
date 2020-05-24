@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ArasaacService } from 'src/app/services/arasaac.service';
-import { Category } from 'src/app/models';
+import { ArasaacService } from 'src/app/services';
+import { Category } from 'src/app/models/category.model';
 
 @Component({
   selector: 'app-board-container',

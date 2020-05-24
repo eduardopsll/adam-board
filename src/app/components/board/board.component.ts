@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Category, Pictogram, Sentence } from "src/app/models";
-import { SentenceService } from "@services";
-import { CarouselEnum } from '@enums';
+import { SentenceService } from "src/app/services";
+import { CarouselEnum } from 'src/app/enums';
 
 @Component({
   selector: "app-board",
