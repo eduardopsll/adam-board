@@ -30,6 +30,10 @@ jobs:
       with:
         name: dist
         path: dist/adam-board
+    - name: Release
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: npx semantic-release
 
   deploy:
     name: Deploy
