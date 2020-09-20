@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from "@angular/core";
 import { Category, Pictogram, Sentence } from "src/app/models";
 import { SentenceService } from "src/app/services";
 import { CarouselEnum } from 'src/app/enums';
+import { PromptUpdateService } from 'src/app/services/prompt.service';
 
 @Component({
   selector: "app-board",
@@ -11,14 +12,17 @@ import { CarouselEnum } from 'src/app/enums';
 export class BoardComponent implements OnInit {
   @Input()
   public categories: Category[];
+  @Input()
+  public images: string[];
 
   public categorySelected: Category;
   public pictogramSentence: Sentence;
   public carouselType = CarouselEnum;
+  public isDownloadMenuDisplayed = true;
 
   public shouldDisplayCategory: boolean = false;
 
-  constructor(private sentenceService: SentenceService) {}
+  constructor(private sentenceService: SentenceService, private promptService: PromptUpdateService) {}
 
   ngOnInit() {}
 
@@ -52,6 +56,19 @@ export class BoardComponent implements OnInit {
     this.sentenceService.resetSentence();
     this.pictogramSentence = this.sentenceService.getPictogramSentence();
     this.hideCategory();
+  }
+
+  public download() {
+    this.promptService.get();
+    this.closeDialog();
+  }
+
+  public imageLoaded(image) {
+    console.log('IMAGE loaded '+image)
+  }
+
+  public closeDialog() {
+    this.isDownloadMenuDisplayed = false;
   }
 
   private displayCategory() {

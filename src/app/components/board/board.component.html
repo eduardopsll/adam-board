@@ -29,3 +29,15 @@
     <img class="btn__icon" src="assets/icons/reset.svg" />
   </button>
 </div>
+<div *ngIf="isDownloadMenuDisplayed" class="download-menu">
+  <div class="download-menu__container">
+    <h1>Descargue Imagenes</h1>
+    <p>Para usar la apliación sin conexión.</p>
+    <button (click)="download()">Descargar</button>
+    <button (click)="closeDialog()">Usar sin descargar</button>
+  </div>
+</div>
+<div *ngIf="!isDownloadMenuDisplayed" class="images-container">
+  <img *ngFor="let image of images" [attr.src]="'assets/arasaac/'+image" (load)="imageLoaded(image)"/>
+
+</div>
