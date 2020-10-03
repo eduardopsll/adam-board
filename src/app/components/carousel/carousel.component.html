@@ -1,6 +1,7 @@
 <ul class="list">
   <li class="list__item" *ngFor="let item of items">
     <app-card
+      tabindex="0"
       [item]="item"
       [class.list__item--selected]="item.id === itemSelected?.id"
       [class.pictogram]="type === carouselType.Pictograms"

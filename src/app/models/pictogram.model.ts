@@ -6,4 +6,5 @@ export interface Pictogram {
     image: string;
     subcategoryNum: string;
     text: string;
+    id?: string
 }

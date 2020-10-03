@@ -17,8 +17,7 @@ import { environment } from '../environments/environment';
     BoardComponent,
     CarouselComponent,
     CardComponent,
-    MenuComponent
-  ],
+    MenuComponent  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
