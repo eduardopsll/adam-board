@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from "@angular/core";
 import { Category, Pictogram, Sentence } from "src/app/models";
 import { SentenceService } from "src/app/services";
 import { CarouselEnum } from 'src/app/enums';
-import { PromptUpdateService } from 'src/app/services/prompt.service';
+import { MatDialog } from '@angular/material';
+import { DialogComponent } from 'src/app/components/dialog/dialog.component';
 
 @Component({
   selector: "app-board",
@@ -12,19 +13,21 @@ import { PromptUpdateService } from 'src/app/services/prompt.service';
 export class BoardComponent implements OnInit {
   @Input()
   public categories: Category[];
-  @Input()
-  public images: string[];
 
   public categorySelected: Category;
   public pictogramSentence: Sentence;
   public carouselType = CarouselEnum;
-  public isDownloadMenuDisplayed = true;
+  public isDownloadingImages = false;
 
   public shouldDisplayCategory: boolean = false;
 
-  constructor(private sentenceService: SentenceService, private promptService: PromptUpdateService) {}
+  constructor(
+    private sentenceService: SentenceService,
+    public dialog: MatDialog) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.openDialog();
+  }
 
   public onCategorySelected(item: Category) {
     if (this.categorySelected && this.categorySelected.id === item.id) {
@@ -58,17 +61,8 @@ export class BoardComponent implements OnInit {
     this.hideCategory();
   }
 
-  public download() {
-    this.promptService.get();
-    this.closeDialog();
-  }
-
   public imageLoaded(image) {
     console.log('IMAGE loaded '+image)
-  }
-
-  public closeDialog() {
-    this.isDownloadMenuDisplayed = false;
   }
 
   private displayCategory() {
@@ -78,5 +72,9 @@ export class BoardComponent implements OnInit {
   private hideCategory() {
     this.categorySelected = undefined;
     this.shouldDisplayCategory = false;
+  }
+
+  private openDialog() {
+    const dialogRef = this.dialog.open(DialogComponent);
   }
 }

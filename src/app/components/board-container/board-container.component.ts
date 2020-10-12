@@ -11,16 +11,13 @@ import { SafeUrl } from '@angular/platform-browser';
 export class BoardContainerComponent implements OnInit {
 
   @Input()
-  categories: Category[];
-
-  public images: SafeUrl[] = []
+  categories: Category[] = [];
 
   constructor(private arasaacService: ArasaacService) { }
 
   ngOnInit() {
     this.arasaacService.getCategories().then(data => {
       this.categories = data;
-      data.forEach((category) => category.items.forEach(item => this.images.push(`${item["categoryId"]}/${item["image"]}`)));
     });
   }
 

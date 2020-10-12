@@ -1,0 +1,9 @@
+<div *ngIf="images.length" class="images-container">
+  {{ images$ | async }}
+  <div *ngIf="images.length">HIIII</div>
+  <img
+    *ngFor="let image of images"
+    [attr.src]="'assets/arasaac/' + image"
+    (load)="imageLoaded(image)"
+  />
+</div>

@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Descargar Imagenes</h1>
+<div mat-dialog-content>
+  <p>Para usar la aplicación sin conexión.</p>
+  <mat-progress-bar mode="determinate" [value]="loadingValue"></mat-progress-bar>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="download()" cdkFocusInitial>Descargar</button>
+    <button mat-raised-button (click)="onClick(dialogActionEnum.DontDownloadAssets)">Usar sin descargar</button>
+</div>
