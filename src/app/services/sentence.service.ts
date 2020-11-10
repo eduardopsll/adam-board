@@ -10,37 +10,37 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class SentenceService {
 
-    private pictogramSentence: Sentence;
+    private sentence: Sentence;
 
     constructor(private textToSpeechService: TextToSpeechService, private languageService: LanguageService){
         this.resetSentence();
     }
 
-    public getPictogramSentence(): Sentence {
-        return this.pictogramSentence;
+    public getSentence(): Sentence {
+        return this.sentence;
     }
 
-    public getSentence() {
-        return this.pictogramSentence.words.map(word => word.audios[this.languageService.getLanguageSelected().id]).join(' ');
+    public getSentenceString() {
+        return this.sentence.pictograms.map(word => word.audios[this.languageService.getLanguageSelected().id]).join(' ');
     }
 
     public addPictogram(pictogram: Pictogram) {
-        this.pictogramSentence.words.push(pictogram);
+        this.sentence.pictograms.push(pictogram);
     }
 
     public removePictogram() {
-        this.pictogramSentence.words.pop();
+        this.sentence.pictograms.pop();
     }
 
     public readSentence() {
-        this.textToSpeechService.utterThis(this.getSentence());
+        this.textToSpeechService.utterThis(this.getSentenceString());
     }
 
     public resetSentence() {
-        this.pictogramSentence = {
+        this.sentence = {
             dateTime: null,
             order: TextDirectionEnum.ltr,
-            words: []
+            pictograms: []
         }
     }
 }

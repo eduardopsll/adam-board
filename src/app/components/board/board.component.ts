@@ -1,8 +1,8 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges, ChangeDetectorRef } from "@angular/core";
 import { Category, Pictogram, Sentence } from "src/app/models";
 import { SentenceService } from "src/app/services";
 import { CarouselEnum } from 'src/app/enums';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatTabChangeEvent } from '@angular/material';
 import { DialogComponent } from 'src/app/components/dialog/dialog.component';
 
 @Component({
@@ -10,71 +10,76 @@ import { DialogComponent } from 'src/app/components/dialog/dialog.component';
   templateUrl: "./board.component.html",
   styleUrls: ["./board.component.scss"],
 })
-export class BoardComponent implements OnInit {
+export class BoardComponent implements OnInit, OnChanges {
   @Input()
   public categories: Category[];
 
-  public categorySelected: Category;
+  public categoryIndexSelected: number;
   public pictogramSentence: Sentence;
   public carouselType = CarouselEnum;
   public isDownloadingImages = false;
-
   public shouldDisplayCategory: boolean = false;
+
+  private sentenceCategory: Category;
 
   constructor(
     private sentenceService: SentenceService,
-    public dialog: MatDialog) {}
+    public dialog: MatDialog,
+    private cdRef: ChangeDetectorRef) {
+      this.categoryIndexSelected = 0;
+      this.sentenceCategory = {
+        id: 'sentence',
+        color: 'white',
+        text: 'Frase',
+        items: []
+      };
+    }
 
   ngOnInit() {
     this.openDialog();
   }
 
-  public onCategorySelected(item: Category) {
-    if (this.categorySelected && this.categorySelected.id === item.id) {
-      this.hideCategory();
-    } else {
-      this.categorySelected = item;
-      this.displayCategory();
+  public ngOnChanges(change: SimpleChanges) {
+    if(change.categories) {
+      this.categories = [this.sentenceCategory, ...this.categories];
     }
+  }
+
+  public onCategorySelected(index: number) {
+    this.categoryIndexSelected = index;
   }
 
   public onPictogramSelected(pictogram: Pictogram) {
     this.sentenceService.addPictogram(pictogram);
-    this.pictogramSentence = this.sentenceService.getPictogramSentence();
-    this.hideCategory();
+    this.sentenceCategory.items = [
+      ...this.sentenceService.getSentence().pictograms
+    ];
+    this.selectTabByIndex(0);
   }
 
   public back() {
     this.sentenceService.removePictogram();
-    this.pictogramSentence = this.sentenceService.getPictogramSentence();
-    this.hideCategory();
+    this.sentenceCategory.items = this.sentenceService.getSentence().pictograms;
+    this.selectTabByIndex(0);
   }
 
   public play() {
     this.sentenceService.readSentence();
-    this.hideCategory();
+    this.selectTabByIndex(0);
   }
 
   public reset() {
     this.sentenceService.resetSentence();
-    this.pictogramSentence = this.sentenceService.getPictogramSentence();
-    this.hideCategory();
+    this.sentenceCategory.items = this.sentenceService.getSentence().pictograms;
+    this.selectTabByIndex(0);
   }
 
-  public imageLoaded(image) {
-    console.log('IMAGE loaded '+image)
-  }
-
-  private displayCategory() {
-    this.shouldDisplayCategory = true;
-  }
-
-  private hideCategory() {
-    this.categorySelected = undefined;
-    this.shouldDisplayCategory = false;
+  private selectTabByIndex = (index: number) => {
+    this.categoryIndexSelected = index;
+    this.cdRef.detectChanges();
   }
 
   private openDialog() {
-    const dialogRef = this.dialog.open(DialogComponent);
+    // const dialogRef = this.dialog.open(DialogComponent);
   }
 }

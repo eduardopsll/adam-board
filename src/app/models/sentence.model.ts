@@ -3,6 +3,6 @@ import { TextDirectionEnum } from 'src/app/enums/text-direction.enum';
 
 export interface Sentence {
     dateTime: string,
-    words: Pictogram[],
+    pictograms: Pictogram[],
     order: TextDirectionEnum
 }

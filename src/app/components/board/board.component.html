@@ -1,31 +1,34 @@
-<app-menu class="menu"></app-menu>
-<app-carousel
-  class="carousel"
-  [itemSelected]="categorySelected"
-  [items]="categories"
-  (onItemSelected)="onCategorySelected($event)"
-></app-carousel>
-<app-carousel
-  *ngIf="shouldDisplayCategory"
-  class="carousel"
-  [type]="carouselType.Pictograms"
-  [items]="categorySelected?.items"
-  (onItemSelected)="onPictogramSelected($event)"
-></app-carousel>
-<app-carousel
-  *ngIf="!shouldDisplayCategory"
-  class="carousel"
-  [type]="carouselType.Sentence"
-  [items]="pictogramSentence?.words"
-></app-carousel>
-<div class="menu-action">
-  <button class="btn btn--play" (click)="play()">
-    <img class="btn__icon" src="assets/icons/multimedia.svg" />
+<!-- <app-menu class="menu"></app-menu> -->
+<mat-tab-group class="tab-group" [selectedIndex]="categoryIndexSelected" (selectedIndexChange)="onCategorySelected($event)">
+  <mat-tab *ngFor="let category of categories">
+    <ng-template mat-tab-label>
+      <app-card
+        [item]="category"
+        [class.list__item--selected]="category.id === itemSelected?.id"
+        [class.pictogram]="type === carouselType.Pictograms"
+        [class.sentence]="type === carouselType.Sentence"
+    ></app-card>
+    </ng-template>
+    <ng-template matTabContent>
+      <app-carousel
+      class="carousel"
+      [type]="carouselType.Pictograms"
+      [items]="category.items"
+      (onItemSelected)="onPictogramSelected($event)"
+    ></app-carousel>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
+<div class="menu-buttons">
+  <button mat-fab color="primary" class="btn" (click)="play()">
+    <mat-icon [inline]="true" class="material-icons md-48"
+      >play_circle_outline</mat-icon
+    >
   </button>
-  <button class="btn btn--back" (click)="back()">
-    <img class="btn__icon" src="assets/icons/back-arrow.svg" />
+  <button mat-fab color="accent" class="btn" (click)="back()">
+    <mat-icon [inline]="true" class="material-icons md-48">undo</mat-icon>
   </button>
-  <button class="btn btn--reset" (click)="reset()">
-    <img class="btn__icon" src="assets/icons/reset.svg" />
+  <button mat-fab color="warn" class="btn" (click)="reset()">
+    <mat-icon [inline]="true" class="material-icons md-48">clear</mat-icon>
   </button>
 </div>

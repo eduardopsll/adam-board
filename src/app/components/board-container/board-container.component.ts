@@ -17,7 +17,7 @@ export class BoardContainerComponent implements OnInit {
 
   ngOnInit() {
     this.arasaacService.getCategories().then(data => {
-      this.categories = data;
+      this.categories = [...data, ...data];
     });
   }
 

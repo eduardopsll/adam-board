@@ -18,52 +18,33 @@
 .carousel {
   flex-grow: 1;
   flex-basis: 0;
-
-  &:last-of-type {
-    padding-bottom: $space-3;
-  }
 }
 
-.menu-action {
+.menu-buttons {
   display: flex;
-  padding: 0 $space-4 * 2;
+  padding: 0 $space-2;
 }
 
 .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  flex-basis: 0;
-  height: pixel-to-rem(46);
-  border: none;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  margin-right: $space-2;
-  background-color: $btn-secondary-color-action;
-
-  &--play {
-    background-color: $btn-primary-color-action;
-  }
-
-  &__icon {
-    height: pixel-to-rem(30);
-  }
+  margin: pixel-to-rem(20);
+  height: pixel-to-rem(80);
+  width: pixel-to-rem(80);
 }
 
-.download-menu {
-  position: absolute;
-  top: 0;
-  left:0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(33, 33, 33, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.material-icons.md-48 {
+  font-size: pixel-to-rem(48);
+}
 
-  &__container {
-    background-color: white;
-    padding: 1rem;
-  }
+.tab-group {
+  flex-grow: 1;
+}
+
+::ng-deep div.mat-tab-label {
+  height: auto;
+  min-width: pixel-to-rem(100);
+  padding: $space-3;
+}
+
+button.btn.mat-fab {
+  margin: $space-2 $space-3;
 }

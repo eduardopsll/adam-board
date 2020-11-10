@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { ServiceWorkerModule } from "@angular/service-worker";
-import { MatDialogModule } from "@angular/material";
+import { MatDialogModule, MatListModule, MatTabsModule } from "@angular/material";
 import { MatButtonModule } from "@angular/material/button";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatIconModule } from "@angular/material/icon";
@@ -31,7 +31,7 @@ import { environment } from "../environments/environment";
     CardComponent,
     MenuComponent,
     DialogComponent,
-    ImagesLoaderContainerComponent,
+    ImagesLoaderContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +45,8 @@ import { environment } from "../environments/environment";
     MatDialogModule,
     MatProgressBarModule,
     MatIconModule,
+    MatListModule,
+    MatTabsModule
   ],
   exports: [RouterModule],
   providers: [],

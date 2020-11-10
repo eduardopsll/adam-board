@@ -30,7 +30,7 @@
 }
 
 .image {
-    width: pixel-to-rem(80);
+    width: auto;
     height: pixel-to-rem(74);
     border-radius: 15px;
     border: 1px solid $border-primary-color;

@@ -21,6 +21,7 @@ export class CarouselComponent implements OnInit {
   public onItemSelected: EventEmitter<Pictogram | Category> = new EventEmitter();
 
   public carouselType = CarouselEnum;
+  public multiple = false;
 
   constructor() { }
 

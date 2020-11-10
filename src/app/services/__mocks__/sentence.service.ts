@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core'
 
 @Injectable()
 export class SentenceService {
-    public getPictogramSentence = jest.fn();
     public getSentence = jest.fn();
+    public getSentenceString = jest.fn();
     public addPictogram = jest.fn();
     public removePictogram = jest.fn();
     public readSentence = jest.fn();
