@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { MatDialogRef } from "@angular/material";
+import { MatDialogRef } from "@angular/material/dialog";
 import { of } from "rxjs";
 import { delay } from "rxjs/operators";
 import { DialogActionEnum } from "src/app/enums";

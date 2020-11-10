@@ -1,12 +1,11 @@
 <!-- <app-menu class="menu"></app-menu> -->
 <mat-tab-group class="tab-group" [selectedIndex]="categoryIndexSelected" (selectedIndexChange)="onCategorySelected($event)">
-  <mat-tab *ngFor="let category of categories">
+  <mat-tab *ngFor="let category of categories; let categoryIndex=index">
     <ng-template mat-tab-label>
       <app-card
         [item]="category"
-        [class.list__item--selected]="category.id === itemSelected?.id"
-        [class.pictogram]="type === carouselType.Pictograms"
-        [class.sentence]="type === carouselType.Sentence"
+        [class.list__item--selected]="categoryIndex === categoryIndexSelected"
+        [class.sentence]="true"
     ></app-card>
     </ng-template>
     <ng-template matTabContent>

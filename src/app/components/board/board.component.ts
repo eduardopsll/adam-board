@@ -1,9 +1,8 @@
-import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges, ChangeDetectorRef } from "@angular/core";
+import { Component, OnInit, Input, OnChanges, SimpleChanges, ChangeDetectorRef } from "@angular/core";
 import { Category, Pictogram, Sentence } from "src/app/models";
 import { SentenceService } from "src/app/services";
 import { CarouselEnum } from 'src/app/enums';
-import { MatDialog, MatTabChangeEvent } from '@angular/material';
-import { DialogComponent } from 'src/app/components/dialog/dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: "app-board",
