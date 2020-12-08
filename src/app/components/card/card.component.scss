@@ -19,6 +19,7 @@
     align-items: center;
     font-size: $font-sm;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: $space-2;
 }
 
 :host-context(.sentence) {

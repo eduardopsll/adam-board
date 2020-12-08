@@ -1,4 +1,4 @@
-<!-- <mat-selection-list class="list" [multiple]="multiple">
+<mat-selection-list class="list" [multiple]="false">
   <mat-list-option class="list__item" *ngFor="let item of items" [value]="item">
     <app-card
       tabindex="0"
@@ -9,20 +9,4 @@
       (onItemSelected)="onItemClick($event)"
     ></app-card>
   </mat-list-option>
-</mat-selection-list> -->
-
-<ul class="list">
-  <li class="list__item" *ngFor="let item of items">
-    <app-card
-      tabindex="0"
-      [item]="item"
-      [class.list__item--selected]="item.id === itemSelected?.id"
-      [class.pictogram]="type === carouselType.Pictograms"
-      [class.sentence]="type === carouselType.Sentence"
-      (onItemSelected)="onItemClick($event)"
-    ></app-card>
-  </li>
-  <ng-container *ngIf="type === carouselType.Sentence">
-    <li class="list__item"><div class="item-empty"></div></li>
-  </ng-container>
-</ul>
+</mat-selection-list>

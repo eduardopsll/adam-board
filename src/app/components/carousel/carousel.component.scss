@@ -3,17 +3,8 @@
 :host {
   display: flex;
   flex-grow: 1;
-  display: flex;
   align-items: stretch;
-
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   width: pixel-to-rem(40);
-  //   height: 116px;
-  //   right: 0;
-  //   background-image: linear-gradient(to right, rgba(216, 216, 216, 0.02), rgba(238, 238, 238, 0.81));
-  // }
+  height: 100%;
 }
 
 .list {
@@ -55,5 +46,13 @@
 
   &--right {
     transform: rotate(-90deg);
+  }
+}
+
+.mat-list-base .mat-list-option {
+  height: auto;
+  ::ng-deep div.mat-list-item-content,
+  ::ng-deep div.mat-list-item-content-reverse {
+    padding: 0;
   }
 }

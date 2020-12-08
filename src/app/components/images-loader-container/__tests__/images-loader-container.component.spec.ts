@@ -1,6 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
+import { ImagesService } from 'src/app/services';
 
 import { ImagesLoaderContainerComponent } from '../images-loader-container.component';
+
+class mockImagesService {
+  set() {
+    return of([]);
+  }
+}
 
 describe('ImagesLoaderContainerComponent', () => {
   let component: ImagesLoaderContainerComponent;
@@ -8,7 +16,11 @@ describe('ImagesLoaderContainerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ImagesLoaderContainerComponent ]
+      declarations: [ ImagesLoaderContainerComponent ],
+      providers: [{
+        provide: ImagesService, 
+        useClass: mockImagesService
+      }]
     })
     .compileComponents();
   }));

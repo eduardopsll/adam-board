@@ -19,6 +19,11 @@ $space-2: $space-1 * 2;
 $space-3: $space-1 * 3;
 $space-4: $space-1 * 4;
 
+$border-radius-1: $space-1;
+
+$maxWidthApp: pixel-to-rem(1024);
+$maxHeightApp: pixel-to-rem(600);
+
 body {
   font-family: $primary_font;
   font-size: $primary-fs;
@@ -26,6 +31,7 @@ body {
 }
 
 $primary-color: rgba(113, 190, 199, 0.78);
+$secondary-color: #7B54F1;
 $light-base: #ffffff;
 
 $text-primary-color: #ffffff;

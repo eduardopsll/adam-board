@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CarouselComponent } from '../carousel.component';
 import { CardComponent } from 'src/app/components/card';
+import { MatListModule } from '@angular/material/list';
 
 describe('CarouselComponent', () => {
   let component: CarouselComponent;
@@ -9,6 +10,7 @@ describe('CarouselComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [MatListModule],
       declarations: [ CarouselComponent, CardComponent ]
     })
     .compileComponents();

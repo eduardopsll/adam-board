@@ -1,12 +1,15 @@
 @import "_base";
 
 :host {
+  background-color: $primary-color;
+  border-radius: $border-radius-1;
   position: relative;
   display: flex;
   flex-direction: column;
+  max-width: $maxWidthApp;
+  max-height: $maxHeightApp;
   height: 100vh;
   width: 100vw;
-  background-color: $primary-color;
 }
 
 .menu {
@@ -43,6 +46,10 @@
   height: auto;
   min-width: pixel-to-rem(100);
   padding: $space-3;
+}
+
+::ng-deep div.mat-tab-body-wrapper {
+  flex-grow: 1;
 }
 
 button.btn.mat-fab {
